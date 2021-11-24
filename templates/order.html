@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>{{ title }} - Order Details</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <h1>Order Details</h1>
+            <div>
+                <p>
+                    {{ order.customer_name }}: <b>{{ order.order_date }}</b>: 
+                    <br><b>{{ order.quantity }}</b>: <b>{{ order.doughnut }}</b>
+                </p>
+            </div>
+            <div>
+                <img src="https://source.unsplash.com/200x200/?donut" alt="donut!!">
+            </div>
+    </body>
+</html>

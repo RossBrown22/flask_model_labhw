@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>{{ title }} - My Order List</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    </head>
+    <body>
+        <h1>Order List</h1>
+        {% for order in orders %}
+            <div>
+                <p>
+                    {{ order.customer_name }}: <b>{{ order.order_date }}</b>: 
+                    
+                    <a href='{{orders.index(order)}}'> Order Details</a>
+                </p>
+            </div>
+        {% endfor %}
+        <div>
+            <img src="https://source.unsplash.com/200x200/?donut" alt="donut!!">
+        </div>
+    </body>
+</html>
